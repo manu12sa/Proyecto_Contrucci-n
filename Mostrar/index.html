@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="title">Tienda de Zapatos </h1>
+    </header>
+    <nav class="nav">
+        <div class="items-nav">
+            <img class="img" src="./images/menu.png" alt="">
+            <img class="img" src="./images/search.png" alt="">
+            <img class="img" src="./images/cog.png" alt="">
+            <img class="img" src="./images/user.png" alt="">
+        </div>
+        <div class="fecha">
+            <time datetime="2023-11-19T15:30:00">04:42 p.m</time>
+            <time datetime="2023-11-06">19-11-2023</time>
+        </div>
+    </nav>
+    <section class="section">
+        <div class="contenedor-lista">
+            <ul class="lista">
+                <li class="item">Proveedor</li>
+                <li class="item">Producto</li>
+                <li class="item">Busqueda</li>
+                <li class="item">Factura</li>
+                <li class="item">Estado del pedido</li>
+            </ul>
+        </div>
+
+
+                <section class="section">
+                    <div class="tablas">
+                        <div class="contenido">
+                            <h2 class="tablas__title">Mostrar Proveedor</h2>
+                            <div class="con-busqueda">
+                                <label for="busqueda">Buscar mediante Cedula</label>
+                                <input
+                                    type="text"
+                                    id="busqueda"
+                                    name="busqueda"
+                                    placeholder="Buscar Cedula..."
+                                />
+                                <button class="btn-lupa" id="searchButton" type="button">
+                                    <img src="images/search.png" alt="Buscar" />
+                                </button>
+                            </div>
+                            <table class="tabla">
+                                <thead>
+                                    <tr>
+                                        <th>Código Proveedor</th>
+                                        <th>RUC</th>
+                                        <th>Nombre</th>
+                                        <th>Apellido Paterno</th>
+                                        <th>Apellido Materno</th>
+                                        <th>Dirección</th>
+                                        <th>Teléfono</th>
+                                        <th>Ciudad</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>001</td>
+                                        <td>123456789</td>
+                                        <td>Juan</td>
+                                        <td>Pérez</td>
+                                        <td>Gómez</td>
+                                        <td>Calle 123</td>
+                                        <td>987654321</td>
+                                        <td>Lima</td>
+                                    </tr>
+                                    <tr>
+                                        <td>002</td>
+                                        <td>987654321</td>
+                                        <td>María</td>
+                                        <td>Ruiz</td>
+                                        <td>Fernández</td>
+                                        <td>Avenida 456</td>
+                                        <td>123456789</td>
+                                        <td>Quito</td>
+                                    </tr>
+                                    <!-- Puedes agregar más filas según sea necesario -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                
+ 
+
+    </section>
+    <div id="modal3" class="modal" style="display: none">
+        <div class="modal-content">
+            <div class="modal-column">
+                <ul>
+                    <li><strong>Código Proveedor:</strong> Valor del Código</li>
+                    <li><strong>RUC:</strong> Valor del RUC</li>
+                    <li><strong>Cédula:</strong> Valor de la Cédula</li>
+                    <li><strong>Nombre:</strong> Valor del Nombre</li>
+                    <li><strong>Apellido:</strong> Valor del Apellido</li>
+                    <li><strong>Apellido Materno:</strong> Valor del Apellido Materno</li>
+                </ul>
+            </div>
+            <div class="modal-column">
+                
+                <ul>
+                    <li><strong>Teléfono:</strong> Valor del Teléfono</li>
+                    <li><strong>Email:</strong> Valor del Email</li>
+                    <li><strong>Dirección:</strong> Valor de la Dirección</li>
+                    <li><strong>Ciudad:</strong> Valor de la Ciudad</li>
+                    <li><strong>Razón Social:</strong> Valor de la Razón Social</li>
+                </ul>
+            </div>
+            <div class="modal-column">
+                
+                <img src="images/foto.jpg" alt="Proveedor">
+            </div>
+            <button id="closeModal3" class="btn">Cerrar</button>
+        </div>
+    </div>
+    <script>
+        const openModal3Button = document.getElementById("openModal3Button");
+        const modal3 = document.getElementById("modal3");
+        const closeModal3 = document.getElementById("closeModal3");
+    
+        openModal3Button.addEventListener("click", () => {
+            modal3.style.display = "flex";
+        });
+    
+        closeModal3.addEventListener("click", () => {
+            modal3.style.display = "none";
+        });
+    </script>
+</body>
+
+</html>
